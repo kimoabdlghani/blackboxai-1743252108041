@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المواد الدراسية | دروسنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Same header as index.html -->
+    <header class="bg-white shadow-sm dark:bg-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <a href="index.html" class="text-2xl font-bold text-blue-600 dark:text-blue-400">دروسنا</a>
+                <nav class="hidden md:flex space-x-6 rtl:space-x-reverse">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">الرئيسية</a>
+                    <a href="subjects.html" class="text-blue-600 dark:text-blue-400 font-medium">المواد الدراسية</a>
+                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">المعلمين</a>
+                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">عن الموقع</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                </button>
+                <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">تسجيل الدخول</a>
+                <button id="mobileMenuButton" class="md:hidden p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-md">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="index.html" class="py-2 text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-gray-700">الرئيسية</a>
+                <a href="subjects.html" class="py-2 text-blue-600 dark:text-blue-400 border-b border-gray-100 dark:border-gray-700">المواد الدراسية</a>
+                <a href="#" class="py-2 text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-gray-700">المعلمين</a>
+                <a href="#" class="py-2 text-gray-700 dark:text-gray-300">عن الموقع</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-blue-800 dark:text-white mb-8">المواد الدراسية</h1>
+        
+        <!-- Subject cards will be added here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="subjectsContainer">
+            <!-- Subjects will be loaded via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Same footer as index.html -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">دروسنا</h3>
+                    <p class="text-gray-400">أفضل منصة تعليمية لطلاب الثانوية العامة في الوطن العربي</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">الرئيسية</a></li>
+                        <li><a href="subjects.html" class="text-gray-400 hover:text-white">المواد الدراسية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">المعلمين</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">تواصل معنا</h4>
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">النشرة البريدية</h4>
+                    <form class="flex flex-col space-y-2">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 rounded bg-gray-700 text-white">
+                        <button type="submit" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 دروسنا. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/subjects.js"></script>
+</body>
+</html>
