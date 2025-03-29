@@ -1,0 +1,28 @@
+/* Main CSS Variables */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --light-bg: #f9fafb;
+  --dark-bg: #111827;
+}
+
+/* Base Styles */
+body {
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: white;
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
